@@ -1,8 +1,8 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "troubleshooting-app"
-  namespace: troubleshooting
+  namespace: "82240947"  # 네임스페이스를 "82240947"로 변경
 spec:
   replicas: 1
   selector:
@@ -14,14 +14,15 @@ spec:
         app: "troubleshooting-app"
     spec:
       tolerations:
-      - key: taint-test
+      - key: "taint-test"  # 이 키는 실제 노드의 taint와 일치해야 합니다.
         operator: Equal
-        value: value
+        value: "value"  # taint의 값
         effect: NoSchedule
       containers:
         - name: "troubleshooting-app"
-          image: cepgbaseacr.azurecr.io/troubleshooting:latest
+          image: ceappacr.azurecr.io/82240947:latest # ACR URL
           resources:
             limits:
               memory: 800Mi
               cpu: 1
+
