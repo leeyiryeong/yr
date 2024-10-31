@@ -9,5 +9,5 @@ spec:
     - port: 8080  # 인그레스에서 사용하는 포트와 일치
       targetPort: 8080  # 컨테이너 포트
   selector:
-    app: troubleshooting  # 이 레이블이 파드에 설정되어 있어야 합니다.
+    app: troubleshooting-app  # Pod에 맞는 레이블로 변경
 
