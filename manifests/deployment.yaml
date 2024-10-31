@@ -18,8 +18,8 @@ spec:
         operator: Equal
         value: "value"  # taint의 값
         effect: NoSchedule
-          imagePullSecrets:
-            - name: my-secret
+      imagePullSecrets:
+        - name: my-secret
       containers:
         - name: "troubleshooting-app"
           image: cepgbaseacr.azurecr.io/troubleshooting:latest
