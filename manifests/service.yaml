@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: troubleshooting
+  namespace: "82240947"
+spec:
+  type: NodePort
+  ports:
+    - port: 8080  # 인그레스에서 사용하는 포트와 일치
+      targetPort: 8080  # 컨테이너 포트
+  selector:
+    app: troubleshooting
