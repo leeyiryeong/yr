@@ -19,7 +19,7 @@ spec:
         value: "value"  # taint의 값
         effect: NoSchedule
           imagePullSecrets:
-            - name: regcred
+            - name: my-secret
       containers:
         - name: "troubleshooting-app"
           image: cepgbaseacr.azurecr.io/troubleshooting:latest
