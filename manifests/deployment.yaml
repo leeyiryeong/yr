@@ -20,7 +20,7 @@ spec:
         effect: NoSchedule
       containers:
         - name: "troubleshooting-app"
-          image: ceappacr.azurecr.io/82240947:latest # ACR URL
+          image: cepgbaseacr.azurecr.io/82240947:latest # ACR URL
           resources:
             limits:
               memory: 800Mi
